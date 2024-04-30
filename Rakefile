@@ -9,20 +9,6 @@ end
 
 task :default => :spec
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  gem.name = "bitset"
-  gem.homepage = "http://github.com/ericboesch/bitset"
-  gem.license = "MIT"
-  gem.summary = 'Bitset implementation.'
-  gem.description = 'A fast C-based Bitset. It supports the standard set operations as well as operations you may expect on bit arrays,such as popcount.'
-  gem.email = "eric.boesch@nist.gov"
-  gem.authors = ["Tyler McMullen"]
-  # Other significant contributions from Eric Boesch, Gabriel Formica, and Brendon McLean.
-
-end
-Jeweler::RubygemsDotOrgTasks.new
-
 require 'rdoc/task'
 RDoc::Task.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
