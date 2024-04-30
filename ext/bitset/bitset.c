@@ -75,7 +75,7 @@ static VALUE rb_bitset_initialize(VALUE self, VALUE ary) {
     return self;
 }
 
-static VALUE rb_bitset_size(VALUE self, VALUE len) {
+static VALUE rb_bitset_size(VALUE self) {
     Bitset * bs = get_bitset(self);
     return INT2NUM(bs->len);
 }
@@ -521,7 +521,7 @@ static VALUE rb_bitset_values_at(VALUE self, VALUE index_array) {
 }
 
 /** This could run a bit faster if you worked at it. */
-static VALUE rb_bitset_reverse(VALUE self, VALUE index_array) {
+static VALUE rb_bitset_reverse(VALUE self) {
     int i;
     Bitset * bs = get_bitset(self);
     int len = bs->len;
